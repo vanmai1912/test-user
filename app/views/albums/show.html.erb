@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= @album.title %></h1>
+
+<h2>Ảnh trong album:</h2>
+<% if @photos.any? %>
+  <ul>
+    <% @photos.each do |photo| %>
+      <li>
+        <%= image_tag photo.image.url  if photo.image?%>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Album không có ảnh.</p>
+<% end %>
+
+

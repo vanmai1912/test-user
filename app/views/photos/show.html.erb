@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @photo %>
+
+<div>
+  <% if @photo.image.present? %>
+  <%= image_tag @photo.image.url %>
+  <% end %>
+
+
+  <%= button_to "Destroy this photo", @photo, method: :delete %>
+</div>
