@@ -1,0 +1,14 @@
+
+<%= form_with model: @user do |form| %>
+    <div class="field">
+      <%= form.label :user_id %>
+      <% @users.each do |user| %>
+        <%= form.radio_button :user_id, user.id %>
+        <%= user.email %>
+        <br>
+      <% end %>
+    </div>
+   
+    <%= form.submit %>
+  <% end %>
+  

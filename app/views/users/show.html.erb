@@ -1,0 +1,6 @@
+
+
+<h2><%= @user.email %></h2>
+<%= form_tag follow_user_path(@user.id), method: :post do %>
+    <%= submit_tag 'Follow', class: 'btn btn-primary' %>
+  <% end %>
